@@ -57,7 +57,7 @@ const useExercise = ({
 
   // Timer effect
   useEffect(() => {
-    let interval: NodeJS.Timeout;
+    let interval: NodeJS.Timeout | undefined;
 
     if (state.isExerciseActive && !state.isPaused && state.startTime) {
       interval = setInterval(() => {
